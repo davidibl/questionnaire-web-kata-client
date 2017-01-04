@@ -1,0 +1,12 @@
+<titel [titel]="'Fragen'" [teilnehmerNummer]="teilnehmerNummer"></titel>
+
+<div *ngIf="fragensaetze">
+    <div class="fragensatz" *ngFor="let fragensatz of fragensaetze">
+        <h2>{{fragensatz.titel}}</h2>
+        <frage *ngFor="let frage of fragensatz.fragen" [frage]="frage"></frage>
+    </div>
+</div>
+<div class="buttonbar">
+    <button (click)="neustart()" class="button left mr20">Neu starten</button>
+    <button (click)="zumErgebnis()" class="button left">Ergebnis ansehen</button>
+</div>

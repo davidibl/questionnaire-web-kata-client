@@ -1,0 +1,93 @@
+@import "./variables.scss";
+@import "../../node_modules/getbase/src/scss/base.scss";
+@import "../../node_modules/getbase/src/scss/base/_helpers.scss";
+@import "../../node_modules/font-awesome/scss/font-awesome.scss";
+@import "../../node_modules/breakpoint-sass/stylesheets/_breakpoint.scss";
+@import "./helpers.scss";
+@import "./common/_animations.scss";
+@import "./common/common_reset";
+@import "./common/_header.scss";
+@import "./common/_button.scss";
+
+
+// Headings
+
+.alt-font {
+    font-family:                                $base-heading-font-family-alternate;
+}
+
+.page-heading {
+    width:                                      100%;
+    margin-bottom:                              25px;
+    margin-top:                                 25px;
+
+    h1 {
+        font-size:                              4rem;
+        margin-bottom:                          4px;
+    }
+}
+
+.lv {
+    color:                                      #008060;
+    font-weight:                                normal;
+}
+
+.main-content {
+    padding-top:                                $header-height + 20px;
+
+    @media (max-width: $breakpoint-m - 1) {
+        padding-top:                            $responsive-header-height + 15px;
+    }
+}
+
+small {
+    font-size:                                  $small-font-size;
+}
+
+.small {
+    font-size:                                  $small-font-size;
+}
+
+p {
+    text-align:                                 justify;
+}
+
+titel {
+    h1 {
+        border-bottom: 1px solid #333;
+        width: 100%;
+        margin-bottom: 5px;
+    }
+    margin-bottom: 60px;
+    display: block;
+}
+
+fragen {
+    
+    .fragensatz {
+        margin-bottom: 50px;
+    }
+
+    frage {
+
+        font-weight: bold;
+
+        antwort {
+            display: block;
+
+            p {
+                margin-bottom: 5px;
+                margin-left: 10px;
+                display: inline-block;
+            }
+            input {
+                display: inline-block;
+            }
+        }
+
+    }
+}
+
+.buttonbar {
+    margin-bottom: 150px;
+}
