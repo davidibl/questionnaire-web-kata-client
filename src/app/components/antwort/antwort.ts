@@ -10,6 +10,10 @@ export class AntwortComponent {
 
     @Input()
     public antwort: IAntwortMoeglichkeit;
+    @Input()
+    public set selektierteAntwort(selektierteAntwort: string) {
+        this._model = this.antwort.antwort === selektierteAntwort;
+    }
 
     public _model: boolean;
 
@@ -19,7 +23,9 @@ export class AntwortComponent {
     public change(newValue: boolean) {
         if (newValue) {
             this.antwortSelektiert.emit(this.antwort.antwort);
+            return;
         }
+        this.antwortSelektiert.emit(null);
     }
 
 }

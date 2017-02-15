@@ -1,12 +1,17 @@
 <titel [titel]="'Fragen'" [teilnehmerNummer]="teilnehmerNummer"></titel>
-
-<div *ngIf="fragensaetze">
-    <div class="fragensatz" *ngFor="let fragensatz of fragensaetze">
-        <h2>{{fragensatz.titel}}</h2>
-        <frage *ngFor="let frage of fragensatz.fragen" [frage]="frage"></frage>
+<form #currentForm="ngForm">
+    <div *ngIf="fragensaetze">
+        <div class="fragensatz" *ngFor="let fragensatz of fragensaetze">
+            <h2>{{fragensatz.titel}}</h2>
+            <span *ngFor="let frage of fragensatz.fragen, let i = index">
+                <frage required="true"
+                    name="{{frage.id}}"
+                    ngModel  [frage]="frage"></frage>
+            </span>
+        </div>
     </div>
-</div>
-<div class="buttonbar">
-    <button (click)="neustart()" class="button left mr20">Neu starten</button>
-    <button (click)="zumErgebnis()" class="button left">Ergebnis ansehen</button>
-</div>
+    <div class="buttonbar">
+        <button (click)="neustart()" class="button left mr20">Neu starten</button>
+        <button (click)="zumErgebnis()" class="button left" [class.disabled]="!currentForm.valid">Ergebnis ansehen</button>
+    </div>
+</form>

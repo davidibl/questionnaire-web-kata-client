@@ -1,2 +1,5 @@
 <h3>{{frage.frage}}</h3>
-<antwort *ngFor="let antwort of frage.moeglicheAntworten" [antwort]="antwort" (antwortSelektiert)="antwortSelektiert($event)"></antwort>
+<antwort *ngFor="let antwort of frage.moeglicheAntworten"
+         [selektierteAntwort]="korrekteAntwort"
+         [antwort]="antwort"
+         (antwortSelektiert)="antwortSelektiert($event)"></antwort>
