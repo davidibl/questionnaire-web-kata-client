@@ -5,9 +5,10 @@ In das Projektverzeichnis wechseln, und dort folgende Befehele nach dem klonen d
 Repository ausführen:
 
 npm install
+
 npm start
 
-Nun wird ein Gulp Build ausgeführt und der Nodejs liet-server gestartet der die
+Nun wird ein Gulp Build ausgeführt und ein Nodejs lite-server gestartet der die
 gebaute Angular2 Anwendung zur Verfügung stellt.
 Standardmäßig ist die Anwendung unter localhost:8020 danach erreichbar.
 
