@@ -3,11 +3,15 @@
     <div *ngIf="fragensaetze">
         <div class="fragensatz" *ngFor="let fragensatz of fragensaetze">
             <h2>{{fragensatz.titel}}</h2>
-            <span *ngFor="let frage of fragensatz.fragen, let i = index">
-                <frage required="true"
-                    name="{{frage.id}}"
-                    ngModel  [frage]="frage"></frage>
-            </span>
+            <wizard>
+                <span *ngFor="let frage of fragensatz.fragen, let i = index">
+                    <wizard-step>
+                        <frage required="true"
+                            name="{{frage.id}}"
+                            ngModel  [frage]="frage"></frage>
+                    </wizard-step>
+                </span>
+            </wizard>
         </div>
     </div>
     <div class="buttonbar">

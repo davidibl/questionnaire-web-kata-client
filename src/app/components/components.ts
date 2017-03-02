@@ -5,6 +5,8 @@ import { HeaderComponent } from './header/header';
 import { AntwortComponent } from './antwort/antwort';
 import { ErgebnisComponent } from './ergebnis/ergebnis';
 import { TitelComponent } from './titel/titel';
+import { WizardComponent } from './wizard/wizard';
+import { WizardStepComponent } from './wizard/wizardStep';
 
 export const ALL_COMPONENTS = [
     FragenComponent,
@@ -14,4 +16,6 @@ export const ALL_COMPONENTS = [
     AntwortComponent,
     TitelComponent,
     ErgebnisComponent,
+    WizardComponent,
+    WizardStepComponent,
 ];
