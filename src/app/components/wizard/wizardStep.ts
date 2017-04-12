@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
     moduleId: __moduleName,
@@ -9,6 +9,7 @@ export class WizardStepComponent {
 
     private _isActive: boolean = false;
 
+    @Input('active')
     public set active(active: boolean) {
         this._isActive = active;
     }
